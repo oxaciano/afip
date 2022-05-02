@@ -1,0 +1,159 @@
+<form method="POST" action="/todoregistro">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="cc01">Fecha de comprobante o fecha de oficialización 8 AAAAMMDD</label>
+        <input type="text" class="form-control" id="cc01" name="fechaDeComprobante">
+      </div>
+      <div class="form-group col-md-1">
+        <label for="cc02">Num</label>
+        <input type="text" class="form-control" id='cc02' name="tipoDeComprobante">
+      </div>
+      <div class="form-group col-md-5">
+        <label for="cc03">Tipo de comprobante 3 TABLA </label>
+        <select class="form-control" id="cc03">
+            <% for( let index = 0; index < cccompras.length; index++ ) { %>
+                <option value= '<%= cccompras[index].codigoFactura %>' ><%= cccompras[index].denominacion %></option> 
+            <% } %>
+          </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="cc04">Punto de venta 5</label>
+        <input type="text" class="form-control" id="cc04" name="puntoDeVenta">
+      </div>
+      <div class="form-group col-md-5">
+        <label for="cc05">Número de comprobante 20</label>
+        <input type="text" class="form-control" id="cc05" name="numeroDeComprobante">
+      </div>
+      <div class="form-group col-md-5">
+        <label for="cc06">Despacho de importacion 16</label>
+        <input type="text" class="form-control" id="cc06" name="despachoDeImportacion">
+      </div>
+      <div class="form-group col-md-1">
+        <label for="cc07">Num</label>
+        <input type="text" class="form-control" id="cc07" name="codigoDeDocumentoDelVendedor">
+    </div>
+      <div class="form-group col-md-5">
+        <label for="cc08"> Codigo de documento del vendedor 2 TABLA</label>
+        <select class="form-control" id="cc08">
+            <% cdoc.forEach(element => { %>
+                <option value= <%= element.codigoDocumento %> ><%= element.tipoDocumento %> </option> 
+              <% }) %>
+        </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc09">Número de identificación del vendedor 20</label>
+            <input type="text" class="form-control" id="cc09" name="numeroDeIdentificacionDelVendedor">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="cc10">Apellido y nombre o denominación del vendedor 30</label>
+            <input type="text" class="form-control" id="cc10" name="apellidoYNombreODenominacionDelVendedor">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc11">Importe total de la operacion 15</label>
+            <input type="text" class="form-control" id="cc11" name="importeTotalDeLaOperacion">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc12">Importe total que no integran el
+                precio neto gravado 15</label>
+            <input type="text" class="form-control" id="cc12" name="importeTotalQueNoIntegranElPrecioNetoGravado">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc13">Importe de operaciones exentas 15</label>
+            <input type="text" class="form-control" id="cc13" name="importeDeOperacionesExternas">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc14">Pagos a cuenta del
+                Impuesto al Valor Agregado 15</label>
+            <input type="text" class="form-control" id="cc14" name="pagosACuentaDelIVA">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc15">pagos a cuenta de
+                otros impuestos nacionales 15</label>
+            <input type="text" class="form-control" id="cc15" name="pagosACuentaDeOtrosImpuestosNacionales">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc16">Importe de percepciones de Ingresos Brutos 15</label>
+            <input type="text" class="form-control" id="cc16" name="pagosACuentaDeIngresosBrutos">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc17">Importe de percepciones de Impuestos
+                Municipales 15</label>
+            <input type="text" class="form-control" id="cc17" name="pagosACuentaDeImpuestosMunicipales">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cc18">Importe de Impuestos Internos 15</label>
+            <input type="text" class="form-control" id="cc18" name="importeDeImpuestosInternos">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="cc19">Moneda</label>
+            <input type="text" class="form-control" id="cc19" name="codigoDeMoneda">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="cc20"> Codigo de documento del vendedor 2 TABLA</label>
+            <select class="form-control" id="cc20">
+                <% cmon.forEach(element => { %>
+                    <option value= <%= element.codigo %> ><%= element.tipoDeMoneda %> </option> 
+                  <% }) %>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="cc21">Tipo de cambio 10</label>
+            <input type="text" class="form-control" id="cc21" name="tipoDeCambio">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="cc22">Cantidad de alícuotas IVA 1</label>
+            <input type="text" class="form-control" id="cc22" name="cantidadDeAlicuotasDeIVA">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="cc23">Cod.</label>
+            <input type="text" class="form-control" id="cc23" name="codigoDeOperacion">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="cc24">Código de operación 1 TABLA</label>
+            <select class="form-control" id="cc24">
+                <% copcompra.forEach(element => { %>
+                    <option value= <%= element.codigo %> ><%= element.operacionCompra %> </option> 
+                  <% }) %>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="cc25">Crédito Fiscal Computable 15</label>
+            <input type="text" class="form-control" id="cc25" name="creditoFiscalComputable">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="cc26">Otros Tributos 15</label>
+            <input type="text" class="form-control" id="cc26" name="otrosTributos">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="cc27">CUIT emisor/corredor 11</label>
+            <input type="text" class="form-control" id="cc27" name="cuitEmisorCorredor">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="cc28">Denominación del emisor/corredor 30</label>
+            <input type="text" class="form-control" id="cc28" name="denominacionEmisorCorredor">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="cc28">IVA comisión 15</label>
+            <input type="text" class="form-control" id="cc28" name="ivaComision">
+        </div>
+        <h4 div class="form-group col-md-12">ALICUOTAS</h4>
+        <div class="form-group col-md-6">
+            <label for="aa01">Importe Neto Gravado</label>
+            <input type="text" class="form-control" id="aa01">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="aa02">Cod.</label>
+            <input type="text" class="form-control" id="aa02">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="aa03">Tipo de Alicuota</label>
+            <select class="form-control" id="aa03">
+                <% calic.forEach(element => { %>
+                    <option value= <%= element.codigoIva %> ><%= element.id %> </option> 
+                  <% }) %>
+            </select>
+        </div>
+        
+<button type="submit" class="btn btn-primary" id="btnsubform">Agregar Otro Comprobante</button>
+</form>
+

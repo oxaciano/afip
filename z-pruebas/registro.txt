@@ -1,0 +1,11 @@
+    // Registros.associate = function (models) {
+
+    //     Registros.belongsToMany(models.usuarios, {
+    //         as: 'recomendados',
+    //         through: 'usuario_producto',
+    //         foreignKey: 'productoId',
+    //         otherKey: 'usuarioId',
+    //         timestamps: false,
+    //     });
+
+    // }

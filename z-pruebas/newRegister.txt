@@ -1,0 +1,144 @@
+<form id='addcc' action="/" method="POST"></form>
+  <h1>NUEVO REGISTRO</h1>  
+   <div>
+      <label>Fecha de comprobante o fecha de oficialización 8 AAAAMMDD </label>
+      <input name='cc01' id='cc01' type="number">
+    </div>
+    <div>
+      <label>Tipo de comprobante 3 TABLA </label>
+      <input name='cc02' id='cc02' type="number">
+      <select name="JKJLKJLK">
+        <% cccompras.forEach(element => { %>
+          <option value= <%= element.denominacion %> ><%= element.denominacion %> </option> 
+        <% }) %>
+      </select>
+    </div>
+    <div>
+      <label>Punto de venta 5</label>
+      <input name='cc03' id='cc03' type="number">
+    </div>
+    <div>
+      <label>Número de comprobante 20</label>
+      <input name='cc04'id='cc04' type="number">
+    </div>
+    <div>
+      <label>Despacho de importacion 16</label>
+      <input name='cc05' id='cc05' type="number">
+    </div>
+    <div>
+      <label>Codigo de documento del vendedor 2 TABLA</label>
+      <input name='cc06' id='cc06'type="number">
+      <select name="JKKKLJK">
+        <% cdoc.forEach(element => { %>
+          <option value= <%= element.tipoDocumento %> ><%= element.tipoDocumento %> </option> 
+        <% }) %>
+      </select>
+    </div>
+    <div>
+      <label>Número de identificación del vendedor 20</label>
+      <input name='cc07' id='cc07' type="number">
+    </div>
+    <div>
+      <label>Apellido y nombre o denominación del vendedor 30</label>
+      <input name='cc08' id='cc08' type="name">
+    </div>
+    <div>
+      <label>Importe total de la operacion 15</label>
+      <input name='cc09' id='cc09' type="number">
+    </div>
+    <div>
+      <label>Importe total de conceptos que no integran el
+        precio neto gravado 15</label>
+      <input name='cc10' id='cc10' type="number">
+    </div>
+    <div>
+      <label>Importe de operaciones exentas 15</label>
+      <input name='cc11' id='cc11' type="number">
+    </div>
+    <div>
+      <label>Importe de percepciones o pagos a cuenta del
+        Impuesto al Valor Agregado 15</label>
+      <input name='cc12' id='cc12' type="number">
+    </div>
+    <div>
+      <label>Importe de percepciones o pagos a cuenta de
+        otros impuestos nacionales 15</label>
+      <input name='cc13' id='cc13'type="number">
+    </div>
+    <div>
+      <label>Importe de percepciones de Ingresos Brutos 15</label>
+      <input name='cc14' id='cc14'type="number">
+    </div>
+    <div>
+      <label>Importe de percepciones de Impuestos
+        Municipales 15</label>
+      <input name='cc15' id='cc15' type="number">
+    </div>
+    <div>
+      <label>Importe de Impuestos Internos 15</label>
+      <input name='cc16' id='cc16' type="number">
+    </div>
+    <div>
+      <label>Código de moneda 3 TABLA</label>
+      <input name='cc17' id='cc17' type="name">
+      <select name="JKJLKJLK">
+        <% cmon.forEach(element => { %>
+          <option value= <%= element.tipoDeMoneda %> ><%= element.tipoDeMoneda %> </option> 
+        <% }) %>
+      </select>
+    </div>
+    <div>
+      <label>Tipo de cambio 10</label>
+      <input name='cc18' id='cc18' type="number">
+    </div>
+    <div>
+      <label>Cantidad de alícuotas de IVA 1</label>
+      <input name='cc19' id='cc19' type="number">
+    </div>
+    <div>
+      <label>Código de operación 1 TABLA</label>
+      <input name='cc20' id='cc20' type="name">
+      <select name="JKJLKJLK">
+        <% copcompra.forEach(element => { %>
+          <option value= <%= element.operacionCompra %> ><%= element.operacionCompra %> </option> 
+        <% }) %>
+      </select>
+    </div>
+    <div>
+      <label>Crédito Fiscal Computable 15</label>
+      <input name='cc21' id='cc21' type="number">
+    </div>
+    <div>
+      <label>Otros Tributos 15</label>
+      <input name='cc22' id='cc22' type="number">
+    </div>
+    <div>
+      <label>CUIT emisor/corredor 11</label>
+      <input name='cc23' id='cc23' type="number">
+    </div>
+    <div>
+      <label>Denominación del emisor/corredor 30</label>
+      <input name='cc24' id='cc24' type="name">
+    </div>
+    <div>
+      <label>IVA comisión 15</label>
+      <input name='cc25' id='cc25' type="name">
+    </div>
+    <div>
+      <h1>ALICUOTAS</h1> 
+    </div>
+    <div>
+      <label>Importe Neto Gravado</label>
+      <input name='aa01' id='aa01' type="name">
+    </div>
+    <div>
+      <label>Tipo de Alicuota</label>
+      <input name='aa02' id='aa02' type="name">
+    </div>
+    <div>
+     <button class="btn-success" id="addccc" type="submit">Agregar Otro Comprobante </button>
+    </div>
+  </form>
+  <script>
+    
+  </script>
